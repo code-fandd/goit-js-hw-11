@@ -24,7 +24,7 @@ refs.formEl.addEventListener('submit', e => {
 
     refs.loader.style.display = 'block';
     refs.galleryEl.innerHTML = ''; 
-    setTimeout(() => {
+    
         getImages(userValue)
             .then(images => {
                 if (!images) {
@@ -44,7 +44,7 @@ refs.formEl.addEventListener('submit', e => {
             .finally(() => {
                 refs.loader.style.display = 'none';
             });
-    }, 1000);
+
 
     e.target.reset();
 });
